@@ -1,0 +1,23 @@
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 100 110" class="svg-smile" height="100" width="110">
+    <circle id="left-ear" cx="15" cy="55" r="10" stroke="black" stroke-width="4" fill="#ccffef" />
+    <circle id="right-ear" cx="95" cy="55" r="10" stroke="black" stroke-width="4" fill="#ccffef" />
+    <circle id="head" cx="55" cy="55" r="40" stroke="black" stroke-width="4" fill="#ccffef" />
+    <circle id="left-eye" cx="44" cy="45" r="11" stroke="black" stroke-width="4" fill="white" />
+    <circle id="right-eye" cx="66" cy="48" r="11" stroke="black" stroke-width="4" fill="white" />
+    <circle id="left-pupil" cx="66" cy="48" r="1" stroke="black" stroke-width="3" fill="black" />
+    <circle id="right-pupil" cx="44" cy="45" r="1" stroke="black" stroke-width="3" fill="black" />
+    <path id="mouth" d="M 38 68 C 42 90 68 90 72 68" stroke="black" stroke-width="4" stroke-linecap="round" fill="none" />
+    <g id="hair">
+        <path d="M 18 39 L 10 35" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 23 28 L 17 24" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 33 21 L 28 14" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 44 15 L 41 8" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 55 15 L 55 5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 66 15 L 69 8" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 76 21 L 82 14" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 86 28 L 93 24" stroke="black" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 92 39 L 100 35" stroke="black" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    Sorry, your browser does not support inline SVG.
+</svg>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Header from './Header';
+
 export default class Blanks extends React.Component {
     constructor(props) {
         super(props);
@@ -33,18 +35,7 @@ export default class Blanks extends React.Component {
     render() {
         return (
             <div className="container-step container-blanks">
-                <header className="header">
-                    <span className="container-smile">
-                        <div className="smile">
-                            :)
-                        </div>
-                    </span>
-                    <span className="container-title">
-                        <div className="title">
-                            {this.props.storyTitle}
-                        </div>
-                    </span>
-                </header>
+                <Header storyTitle={this.props.storyTitle} />
                 <div className="blanks-list">
                     {this.props.blanksArray.map((blank, index) => {
                         return <div className="blank">

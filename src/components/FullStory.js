@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CompletedBlanks from './CompletedBlanks';
+import Header from './Header';
 
 export default class FullStory extends React.Component {
     constructor(props) {
@@ -17,18 +18,7 @@ export default class FullStory extends React.Component {
 
         return (
             <div className="container-step container-full-story">
-                <header className="header">
-                    <span className="container-smile">
-                        <div className="smile">
-                            :)
-                        </div>
-                    </span>
-                    <span className="container-title">
-                        <div className="title">
-                            {this.props.storyTitle}
-                        </div>
-                    </span>
-                </header>
+                <Header storyTitle={this.props.storyTitle} />
                 <div className="container-story">
                     <div className="story">
                         {storyArray.map((string, index) => {
