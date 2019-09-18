@@ -1,0 +1,96 @@
+{
+    "A Day At the Beach": {
+        "blanks": [
+            [
+                "Adjective",
+                ""
+            ],
+            [
+                "Adjective",
+                ""
+            ],
+            [
+                "Number",
+                ""
+            ],
+            [
+                "Verb",
+                ""
+            ],
+            [
+                "Noun (Plural)",
+                ""
+            ],
+            [
+                "Noun",
+                ""
+            ],
+            [
+                "Body of Water",
+                ""
+            ],
+            [
+                "Color",
+                ""
+            ],
+            [
+                "Animal (Plural)",
+                ""
+            ],
+            [
+                "Verb (Present Tense)",
+                ""
+            ],
+            [
+                "Adverb",
+                ""
+            ],
+            [
+                "Name",
+                ""
+            ],
+            [
+                "Verb (Present Tense)",
+                ""
+            ],
+            [
+                "Adjective",
+                ""
+            ],
+            [
+                "Verb (Present Tense)",
+                ""
+            ],
+            [
+                "Body Part",
+                ""
+            ],
+            [
+                "Group of People",
+                ""
+            ],
+            [
+                "Verb",
+                ""
+            ]
+        ],
+        "story": "I love to go to the beach. My favorite thing about the beach is how ??? it is. Nature really is so ???. There must be more than ??? grains of sand here! On the beach, the sandcastles I like to ??? look like ???. Sometimes, they are as big as a ???! And the ??? is so ???. It always make me wonder if there are any ??? ??? ??? down there! When I visit the beach with my best friend ???, we spend a lot of time ??? in the water. The sun is always so ??? in the sky, ??? rays down until my ??? has a sunburn. Remember, ???, always ??? sunscreen!"
+    },
+    "My New Puppy": {
+        "blanks": [
+            [
+                "Adjective",
+                ""
+            ],
+            [
+                "Name",
+                ""
+            ],
+            [
+                "Adverb",
+                ""
+            ]
+        ],
+        "story": "Let me tell you about my ??? new puppy. Her name is ???. She loves to sleep ???."
+    }
+}

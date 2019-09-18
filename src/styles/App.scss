@@ -1,0 +1,240 @@
+@import 'reset.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Permanent+Marker&display=swap');
+
+$font-gentium: 'Gentium Book Basic', serif;
+$font-marker: 'Permanent Marker', cursive;
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(156, 156, 99, .3);
+  font-size: 24px;
+  font-family: $font-gentium;
+
+  h2 {
+    margin: 1rem;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.container-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+
+  header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 5px solid black;
+    width: 100%;
+    height: 20%;
+
+    .container-smile, .container-title {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      vertical-align: middle;
+      
+      .title, .smile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: .2rem;
+        font-size: 36px;
+      }
+    }
+
+    .container-smile {
+      width: 33.33333%;
+      border-right: 5px solid black;
+    }
+
+    .container-title {
+      left: 33.33333%;
+      width: 66.66666%;
+
+
+    }
+  }
+}
+
+.container-story-select {
+  position: relative;
+  justify-content: center;
+
+  .header {
+    position: absolute;
+    top: 1rem;
+    font-size: 48px;
+    font-weight: 900;
+  }
+
+  .container-selector {
+    width: 100%;
+
+  .story-selector {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .option {
+      display: block;
+      width: 100%;
+      padding: .2rem;
+      border-radius: .5rem;
+      transition: background-color .2s;
+
+      &:hover {
+        background-color: rgba(156, 156, 99, .3);
+        cursor: pointer;
+      }
+    }
+  }
+}
+}
+
+.container-blanks {
+
+.blanks-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  height: 70%;
+  overflow: auto;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: .5rem;
+   }
+ 
+   &::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 1rem;
+ 
+    &:hover {
+     background: rgba(156, 156, 99, .5);
+    }
+   }
+
+  .blank {
+    width: 94%;
+
+    .user-input {
+      display: inline-block;
+      width: 98%;
+      margin: .2rem;
+      padding: .2rem;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid black;
+      background-color: rgba(156, 156, 99, 0);
+      font-family: $font-marker;
+      font-size: 18px;
+
+      &::placeholder {
+        color: #8e8e72;
+        font-family: $font-gentium;
+      }
+    }
+  }
+}
+  .button-blanks {
+    margin-top: 1rem;
+    padding: .5rem;
+    border:2px solid black;
+    border-radius: .5rem;
+    background-color: rgba(156, 156, 99, 0);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+}
+
+.container-full-story {
+  .story {
+    height: 80%;
+  }
+
+
+  .container-story {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: .5rem;
+     }
+   
+     &::-webkit-scrollbar-thumb {
+      background-color: black;
+      border-radius: 1rem;
+   
+      &:hover {
+       background: rgba(156, 156, 99, .5);
+      }
+     }
+  }
+
+  .completed-blank {
+    display: inline-block;
+    vertical-align: -100%;
+    text-align: center;
+
+    .user-answer, .part-of-speech {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .user-answer {
+      padding-bottom: 2px;
+      border-bottom: 2px solid black;
+      font-family: $font-marker;
+    }
+
+    .part-of-speech {
+      position: relative;
+      top: -5px;
+      font-size: 12px;
+    }
+  }
+}
+
+/* Animations */
+
+.fadeIn-appear {
+  opacity: 0
+}
+
+.fadeIn-appear.fadeIn-appear-active {
+  opacity: 1;
+  transition: opacity 600ms linear;
+}

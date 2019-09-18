@@ -1,26 +1,68 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { CSSTransition } from 'react-transition-group';
+
+import StorySelect from './components/StorySelect';
+import Blanks from './components/Blanks';
+import FullStory from './components/FullStory';
+
+import storyOptions from './utils/stories.json';
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      step: 1,
+      blanksArray: [],
+      storyTitle: "",
+      story: ""
+    }
+  }
+
+  storySelect = (selectedStory) => {
+    this.setState({
+      step: this.state.step + 1,
+      blanksArray: storyOptions[selectedStory].blanks,
+      storyTitle: selectedStory,
+      story: storyOptions[selectedStory].story
+    })
+  }
+
+  fillBlanks = (filledBlanksArray) => {
+    let newBlanksArray = [...this.state.blanksArray]
+    newBlanksArray.map((elem, index) => {
+      return newBlanksArray[index][1] = filledBlanksArray[index]
+    })
+    this.setState({
+      step: this.state.step + 1,
+      blanksArray: newBlanksArray
+    })
+  }
+
+  render() {
+
+    return (
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={600}
+        classNames="fadeIn"
+      >
+        <div className="App">
+          {this.state.step === 1 &&
+            <StorySelect step={this.state.step}
+              storySelect={this.storySelect} />}
+          {this.state.step === 2 &&
+            <Blanks storyTitle={this.state.storyTitle}
+              blanksArray={this.state.blanksArray}
+              fillBlanks={this.fillBlanks} />}
+          {this.state.step === 3 &&
+            <FullStory storyTitle={this.state.storyTitle}
+              story={this.state.story}
+              filledBlanks={this.state.blanksArray} />}
+        </div>
+      </CSSTransition>
+    );
+  }
 }
-
-export default App;
