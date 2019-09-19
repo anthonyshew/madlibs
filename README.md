@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Mad Libs
+#### Exactly like the Mad Libs from when you did when you are a kid. Fill in the blanks and end up with a wacky story!
 
-## Available Scripts
+If you are a frequenter of Github, feel free to browse this repository to learn more about my skills.
 
-In the project directory, you can run:
+If you aren't a fellow programming junkie, you can visit this project at [www.shewsmadlibs.netlify.com/](www.shewsmadlibs.netlify.com/) and make up a fun story yourself!
 
-### `npm start`
+## About This Project
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is built using React for a front-end framework and SASS for styling. Additionally, animations are handled by the react-transition-group package. It is served by Netlify on the backend for a simple, fast, reliable, serverless experience that I can depend on.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Lessons Learned
+- **Step-based Project**  - I was interested in doing Mad Libs for a couple reasons, the most principal being that I realized I hadn't done any "step-by-step" front-ends yet. To accomplish this, I used the top-level <App /> component's state as a shared state for the rest of the components and brought their state down to make sure everything stayed consistent. Of course, lifting the state back up was integral in making sure that the app always was using the same data - all the time.
 
-### `npm test`
+- **SVG Creation** - I had made rudimentary SVGs in the past just because I heard the abbreviation "SVG" early in my learning and decided I needed to know how to make such art myself. I ended up with a few circles and squares on a page so the classic "Mad Libs smiley" in the header was my first actual SVG drawing that I can recall. Of course, this drawing is pretty simple compared to what SVG is capable of doing but I'm sure I'll be making something much more complex in the near future.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Custom Scrollbars** - I knew I had seen it before but had never actually done it myself. I put so much effort into giving my app the look and feel of Mad Libs pages that once I saw the default scrollbar on one of my nested divs, I had to figure out how to change it. Luckily, it only takes a few more SASS classes and styles to handle this; I thought it would be much more involved. Lesson learned!
 
-### `npm run build`
+## Challenges & Improvements Ahead
+- **More Nostalgia!** - Opening up on a Mad Libs-esque cover would be a great way to add some more nostalgia as well as make the project feel more "real." I really want to make this app feel like you're holding a Mad Libs book like you did during your childhood so a cover page would only be right. Click or press a button and you get to go right into the book. I also want a page turning animation instead of fading the steps in and out of each other.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **More Stories** - Did I just make a Mad Libs book that has two stories and a test story? Yup. Updating to create more stories will be really simple. All I have to do is type them out in the stories.json file. The rest of the app will update accordingly such that I won't have to do anything else! Well coded, Shew.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **Meta Information** - Well, this is an easy one but an ever present reminder to pay attention to the little things. I didn't update the manifest.json or index.html page with appropriate information. Small and annoying, but easy.
