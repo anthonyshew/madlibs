@@ -3,7 +3,7 @@
 
 If you are a frequenter of Github, feel free to browse this repository to learn more about my skills.
 
-If you aren't a fellow programming junkie, you can visit this project at [www.shewsmadlibs.netlify.com/](http://www.shewsmadlibs.netlify.com/) and make up a fun story yourself!
+If you aren't a fellow programming junkie, you can visit this project at [www.shewsmadlibs.netlify.com/](https://www.shewsmadlibs.netlify.com/) and make up a fun story yourself!
 
 ## About This Project
 
