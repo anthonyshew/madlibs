@@ -92,5 +92,18 @@
             ]
         ],
         "story": "Let me tell you about my ??? new puppy. Her name is ???. She loves to sleep ???."
+    },
+    "The Greatest Test of All of Time": {
+        "blanks": [
+            [
+                "Noun",
+                ""
+            ],
+            [
+                "Noun",
+                ""
+            ]
+        ],
+        "story": "I'm starting this off with one nice big long string. I just need one ??? right here probably so that I can see how this ends up looking but I'll add one more ??? here for good measure. NOw, that I did this, I'm going to go check it out. LOREM IPSUM DIPSUM SHMIPSUM BOI"
     }
 }

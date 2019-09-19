@@ -1,4 +1,5 @@
 @import 'reset.scss';
+@import 'animations.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Permanent+Marker&display=swap');
 
@@ -11,11 +12,23 @@ $font-marker: 'Permanent Marker', cursive;
   background-color: rgba(156, 156, 99, .3);
   font-size: 24px;
   font-family: $font-gentium;
+  overflow: hidden;
 
   h2 {
     margin: 1rem;
     text-align: center;
     font-size: 24px;
+  }
+
+  .reset-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -69,6 +82,7 @@ $font-marker: 'Permanent Marker', cursive;
     .container-title {
       left: 33.33333%;
       width: 66.66666%;
+      overflow: hidden;
 
       .title {
         padding: 1rem;
@@ -80,6 +94,7 @@ $font-marker: 'Permanent Marker', cursive;
 .container-story-select {
   position: relative;
   justify-content: center;
+  background-color: rgba(156, 156, 99, .3);
 
   .header {
     position: absolute;
@@ -124,6 +139,7 @@ $font-marker: 'Permanent Marker', cursive;
   justify-content: flex-start;
   width: 90%;
   height: 70%;
+  padding: 0 1rem;
   overflow: auto;
   scroll-behavior: smooth;
 
@@ -172,9 +188,9 @@ $font-marker: 'Permanent Marker', cursive;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color .2s, color .2s;
+    transition: all .2s;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: black;
       color: white;
     }
@@ -184,7 +200,10 @@ $font-marker: 'Permanent Marker', cursive;
 
 .container-full-story {
   .story {
+    padding: 0 1rem;
+    max-width: 680px;
     height: 80%;
+    line-height: 40px;
   }
 
 
@@ -192,7 +211,7 @@ $font-marker: 'Permanent Marker', cursive;
     height: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -211,6 +230,7 @@ $font-marker: 'Permanent Marker', cursive;
 
   .completed-blank {
     display: inline-block;
+    height: 40px;
     vertical-align: -100%;
     text-align: center;
 
@@ -220,26 +240,16 @@ $font-marker: 'Permanent Marker', cursive;
     }
 
     .user-answer {
-      padding-bottom: 2px;
+      height: 33px;
       border-bottom: 2px solid black;
       font-family: $font-marker;
     }
 
     .part-of-speech {
       position: relative;
-      top: -5px;
+      top: -26px;
+      height: 25px;
       font-size: 12px;
     }
   }
-}
-
-/* Animations */
-
-.fadeIn-appear {
-  opacity: 0
-}
-
-.fadeIn-appear.fadeIn-appear-active {
-  opacity: 1;
-  transition: opacity 600ms linear;
 }

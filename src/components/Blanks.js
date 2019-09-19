@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 import Header from './Header';
 
@@ -6,12 +7,15 @@ export default class Blanks extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            appear: true,
+            enterTimeout: 500, //Animation timing must also be changed in animations.scss!
+            exitTimeout: 500, //Animation timing must also be changed in animations.scss!
             userInputs: [],
             error: ""
         };
     }
 
-    componentDidMount = () => {
+    componentWillMount = () => {
         this.setState({ userInputs: Array.from(" ".repeat(this.props.blanksArray.length)) })
     }
 
@@ -29,22 +33,42 @@ export default class Blanks extends React.Component {
                     this.setState({ error: "" })
                 }, 3000)
             })
-        } else { return this.props.fillBlanks(this.state.userInputs) }
+        } else {
+            return [
+                this.setState({
+                    appear: false
+                }),
+                setTimeout(() => {
+                    this.props.fillBlanks(this.state.userInputs)
+                }, this.state.exitTimeout)
+            ]
+        }
     }
 
     render() {
         return (
-            <div className="container-step container-blanks">
-                <Header storyTitle={this.props.storyTitle} />
-                <div className="blanks-list">
-                    {this.props.blanksArray.map((blank, index) => {
-                        return <div className="blank">
-                            <input id={index} className="user-input" onChange={this.onChange} placeholder={blank[0]} autoComplete="off"></input>
-                        </div>
-                    })}
+            <CSSTransition
+                in={this.state.appear}
+                appear={true}
+                exit={true}
+                timeout={{
+                    enter: this.state.enterTimeout,
+                    exit: this.state.exitTimeout
+                }}
+                classNames="fade"
+            >
+                <div className="container-step container-blanks">
+                    <Header storyTitle={this.props.storyTitle} />
+                    <div className="blanks-list">
+                        {this.props.blanksArray.map((blank, index) => {
+                            return <div className="blank">
+                                <input id={index} className="user-input" onChange={this.onChange} placeholder={blank[0]} autoComplete="off"></input>
+                            </div>
+                        })}
+                    </div>
+                    <button className="button-blanks" onClick={this.handleBlankSubmissions}>{this.state.error || "Fill it in!"}</button>
                 </div>
-                <button className="button-blanks" onClick={this.handleBlankSubmissions}>{this.state.error || "Fill it in!"}</button>
-            </div>
+            </CSSTransition>
         )
     }
 }

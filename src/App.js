@@ -1,13 +1,12 @@
 import React from 'react';
 import './styles/App.scss';
 
-import { CSSTransition } from 'react-transition-group';
-
+import ResetButton from './components/ResetButton';
 import StorySelect from './components/StorySelect';
 import Blanks from './components/Blanks';
 import FullStory from './components/FullStory';
 
-import storyOptions from './utils/stories.json';
+import storyOptions from './stories.json';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,6 +17,10 @@ export default class App extends React.Component {
       storyTitle: "",
       story: ""
     }
+  }
+
+  stepReset = () => {
+    this.setState({ step: 1 })
   }
 
   storySelect = (selectedStory) => {
@@ -43,26 +46,22 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <CSSTransition
-        in={true}
-        appear={true}
-        timeout={600}
-        classNames="fadeIn"
-      >
-        <div className="App">
-          {this.state.step === 1 &&
-            <StorySelect step={this.state.step}
-              storySelect={this.storySelect} />}
-          {this.state.step === 2 &&
-            <Blanks storyTitle={this.state.storyTitle}
-              blanksArray={this.state.blanksArray}
-              fillBlanks={this.fillBlanks} />}
-          {this.state.step === 3 &&
-            <FullStory storyTitle={this.state.storyTitle}
-              story={this.state.story}
-              filledBlanks={this.state.blanksArray} />}
-        </div>
-      </CSSTransition>
+      <div className="App">
+        {(this.state.step === 2 || this.state.step === 3) &&
+          <ResetButton
+            stepReset={this.stepReset} />}
+        {this.state.step === 1 &&
+          <StorySelect step={this.state.step}
+            storySelect={this.storySelect} />}
+        {this.state.step === 2 &&
+          <Blanks storyTitle={this.state.storyTitle}
+            blanksArray={this.state.blanksArray}
+            fillBlanks={this.fillBlanks} />}
+        {this.state.step === 3 &&
+          <FullStory storyTitle={this.state.storyTitle}
+            story={this.state.story}
+            filledBlanks={this.state.blanksArray} />}
+      </div>
     );
   }
 }
